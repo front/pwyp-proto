@@ -1,0 +1,12 @@
+.container {
+  padding-right: gutter() * .5;
+  padding-left: gutter() * .5;
+
+  @include breakpoint($break-small) {
+    @include container($break-large)
+  }
+
+  @include breakpoint($break-medium) {
+    @include show-grid($layout-medium);
+  } 
+}

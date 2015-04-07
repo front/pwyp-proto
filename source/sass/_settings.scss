@@ -60,9 +60,18 @@ $link-color-hover: darken($link-color, 15%);
 /* Grid settings
 ========================== */
 $susy: (
-  columns: 4,
+  columns: 6,
   gutters: .5,
   math: fluid,
   output: float,
   debug: (image: show)
 );
+
+$layout-medium: layout(12 1/2 false); // 12 columns, 1/3 gutter
+
+
+// Breakpoints
+$break-small: 26em; // 400px
+$break-medium: 34em; 
+$break-large: 47em; 
+$break-xlarge: 64em;
