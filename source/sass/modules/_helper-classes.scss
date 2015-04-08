@@ -1,0 +1,247 @@
+/*doc
+---
+title: Hide elements
+name: hide-elements
+category: Element
+  - Helper class
+---
+
+Different ways to hide elements.
+
+```html_example
+<a href="" class="visuallyhidden">Example hidden link</a>
+<a href="" class="visuallyhidden focusable">Example hidden link</a>
+<a href="" class="invisible">Example hidden link</a>
+```
+
+Class name | Comment
+:---|:---
+`visuallyhidden` | Visually hide elements, but have them available for screen readers.
+`focusable` | By also adding this, a link would be shown on focus.
+`invisible` | Hide visually and from screenreaders, but maintain layout.
+*/
+
+
+// Visability
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+
+  // Extends the .visuallyhidden class to allow the element to be focusable
+  // when navigated to via the keyboard: h5bp.com/p
+  &.focusable:active,
+  &.focusable:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+  }
+}
+
+.invisible { visibility: hidden; }
+
+
+/*doc
+---
+title: Clearfix
+name: clearfix
+category: Element
+  - Helper class
+---
+
+`clearfix` can be applied on a container that breaks because of floating elements inside it. 
+
+```html_example
+<div class="clearfix" style="border: 1px solid black;">
+  <img src="http://placehold.it/200x300" alt="" style="float: right;">
+</div>
+```
+*/
+
+%clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table; 
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+/*doc
+---
+title: Alignment
+name: alignment
+category: Element
+  - Helper class
+---
+
+Description.
+
+```html_example
+<p>Example</p>
+```
+*/
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+/*doc
+---
+title: Box display
+name: block-display
+category: Element
+  - Helper class
+---
+
+Helper class to change a default inline element to a block element, or the other way arround. Illustrated in the example where a label changes from inline to block when adding the class `block`.
+
+```html_example
+<label for="example-inline">Inline label <small>(default)</small></label>
+<input type="text" id="example-inline">
+
+<label for="example-block" class="block">Block label</label>
+<input type="text" id="example-block">
+```
+
+Class name | Comment 
+:--- | :---
+`block` | Change display to block
+`inline` | Change display to inline
+
+*/
+
+.block {
+  display: block !important;
+}
+
+.inline {
+  display: inline-block !important;
+}
+
+
+/*doc
+---
+title: Space
+name: space
+category: Element
+  - Helper class
+---
+
+Add space to a element. 30px are added on smaller screens and it expands to 60px on larger screens. A background is added in the example to better illustrate the space. 
+
+Class | Description
+:--- | :---
+`space-top` | Add space on top of a element
+`space-top-half` | Add space on top, but half of `space-top`
+`space-bottom` | Add space on bottom of a element
+`space-bottom-half` | Add half space on bottom of a element
+`space-top-bottom` | Add space on top and bottom of a element
+
+```html_example
+<div class="container space-top bg-light">
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat.</p>
+</div>  
+```
+*/
+
+.space- {
+  &top {
+    padding-top: $space;
+
+    @include breakpoint($break-large) {
+      padding-top: $space-double;
+    }  
+  }
+
+  &top-half {
+    padding-top: $space-half;
+
+    @include breakpoint($break-large) {
+      padding-top: $space;
+    }  
+  }
+}
+
+.space- {
+  &bottom {
+    padding-bottom: $space;
+
+    @include breakpoint($break-large) {
+      padding-bottom: $space-double;
+    }  
+  }
+
+  &bottom-half {
+    padding-bottom: $space-half;
+
+    @include breakpoint($break-large) {
+      padding-bottom: $space;
+    } 
+  }
+}
+
+.space-top-bottom {
+  padding-top: $space;
+  padding-bottom: $space;
+
+  @include breakpoint($break-large) {
+    padding-top: $space-double;
+    padding-bottom: $space-double;
+  }  
+}
+
+/*doc
+---
+title: No-space
+name: no-space
+category: Element
+  - Helper class
+---
+
+Remove space on a element.
+
+Class | Description
+:-- | :--
+`nospace` | Remove space arround all edges of a element
+`nospace-top` | Remove space on top of a element
+`nospace-bottom` | Remove space on bottom of a element
+
+*/
+
+
+.nospace {
+  padding: 0 !important;
+}
+
+.nospace-top {
+  padding-top: 0 !important;
+}
+
+.nospace-bottom {
+  padding-bottom: 0 !important;
+}

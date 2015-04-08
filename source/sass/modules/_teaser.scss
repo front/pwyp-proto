@@ -1,0 +1,24 @@
+.teaser {
+
+}
+
+.teaser--stack {
+  @extend .teaser;
+}
+
+.teaser--adjacent {
+  @extend .teaser;
+
+  .img {
+    @include breakpoint($break-medium) {
+      @include span(4 $layout-medium);
+    }
+  }
+
+  @include breakpoint($break-medium) {
+    .title, 
+    .desc {
+      margin-left: span(4 $layout-medium) + gutter($layout-medium);
+    }
+  }
+}

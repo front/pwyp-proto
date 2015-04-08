@@ -55,3 +55,7 @@ Class | Description
     }
   }
 }
+
+.grid--stack {
+  @extend .grid;
+}
