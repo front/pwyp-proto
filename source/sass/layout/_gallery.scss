@@ -1,0 +1,25 @@
+.gallery {
+  .grid-item {
+    margin-bottom: gutter($layout-medium);
+  }
+}
+
+.gallery--six {
+  @extend .gallery;
+
+  .grid-item {
+
+    @include breakpoint($break-xsmall) {
+      @include gallery(3);
+    }
+
+    @include breakpoint($break-small) {
+      @include gallery(2);
+    }
+
+    @include breakpoint($break-medium) {
+      @include gallery(2 $layout-medium);
+    }
+  }
+}
+
