@@ -4,6 +4,21 @@
   }
 }
 
+.gallery--four {
+  @extend .gallery;
+
+  .grid-item {
+
+    @include breakpoint($break-xsmall) {
+      @include gallery(3);
+    }
+
+    @include breakpoint($break-medium) {
+      @include gallery(3 $layout-medium);
+    }
+  }
+}
+
 .gallery--six {
   @extend .gallery;
 
