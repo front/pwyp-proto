@@ -45,7 +45,8 @@ gulp.task('clean', function() {
 gulp.task('copy-files', function() {
     return gulp.src([
         // path.src + 'CNAME',
-        // path.src + 'bower_components/jquery/**/jquery.min.js'
+        path.bower + 'jquery/dist/jquery.js',
+        path.bower + 'fitvids/jquery.fitvids.js'
     ], { base: '.' }) // base keeps original path
         .pipe(gulp.dest( path.dest));
 });
@@ -88,6 +89,8 @@ gulp.task('img', function () {
 // Javascript tasks
 gulp.task('js', function() {
     return gulp.src([
+            path.bower + 'jquery/dist/jquery.js',
+            path.bower + 'fitvids/jquery.fitvids.js',
             path.src + 'javascript/vendor/*.js',
             path.src + 'javascript/*.js'
         ])

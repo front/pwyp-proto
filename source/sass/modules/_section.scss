@@ -1,3 +1,11 @@
 .section-row {
   @extend %clearfix;
 }
+
+.section-main {
+  @extend %clearfix;
+}
+
+.section-footer {
+  // @extend %clearfix;
+}
