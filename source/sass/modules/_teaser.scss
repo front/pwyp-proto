@@ -21,13 +21,13 @@
   }
 
   .title {
-    font-size: em(13);
+    font-size: em($h4);
     font-weight: $fw-bold;
     clear: none;
     margin: 1em 0 .25em;
 
     @include breakpoint($break-large) {
-      font-size: em(18);
+      font-size: em($h3);
     }
   }
 
