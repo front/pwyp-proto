@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html ng-app="cortana">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Element - Helper class</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="./theme-build/css/vendors.css">
+    <link rel="stylesheet" href="./theme-build/css/cortana.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="../assets/css/style.css">
+      
+    
+
+    <!--[if lt IE 9]>
+      <script src="theme-build/polyfill/html5shiv.js"></script>
+      <script src="theme-build/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="cortana-body"  ng-controller="MainController">
+
+    <div class="sb-slidebar sb-left cortana-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+
+      <nav class="cortana-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+          <h3>Element</h3>
+          <ul>
+          
+            
+              
+              
+                <li><a class="active" href="element_-_helper_class.html">Helper class</a></li>
+              
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Container</h3>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a href="container_-_grid.html">Grid</a></li>
+              
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <header class="cortana-header sb-slide">
+      
+        <h1>Helper class</h1>
+      
+      <div id="open-left" class="cortana-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="cortana-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="cortana-search" type="text" class="form-control cortana-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
+    </header>
+
+    <div id="sb-site">
+
+      <div class="cortana-container">
+
+        <nav id="cortana-inside-nav" class="cortana-inside-nav" bs-affix>
+          <ul bs-scrollspy-list data-offset="-30">
+            
+              
+                <li><a href="#alignment">Alignment</a></li>
+              
+            
+              
+                <li><a href="#block-display">Box display</a></li>
+              
+            
+              
+                <li><a href="#clearfix">Clearfix</a></li>
+              
+            
+              
+                <li><a href="#hide-elements">Hide elements</a></li>
+              
+            
+              
+                <li><a href="#no-space">No-space</a></li>
+              
+            
+              
+                <li><a href="#space">Space</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="cortana-content-wrapper clearfix">
+          <div class="cortana-content">
+
+
+
+<h1 id="alignment">Alignment</h1>
+
+<p>Description.</p>
+</div><div class="codeExample"><div class="exampleOutput"><p>Example</p>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;p&gt;</span>Example<span class="nt">&lt;/p&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<h1 id="block-display">Box display</h1>
+
+<p>Helper class to change a default inline element to a block element, or the other way arround. Illustrated in the example where a label changes from inline to block when adding the class <code>block</code>.</p>
+</div><div class="codeExample"><div class="exampleOutput"><label for="example-inline">Inline label <small>(default)</small></label>
+<input type="text" id="example-inline">
+
+<label for="example-block" class="block">Block label</label>
+<input type="text" id="example-block">
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"example-inline"</span><span class="nt">&gt;</span>Inline label <span class="nt">&lt;small&gt;</span>(default)<span class="nt">&lt;/small&gt;&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"example-inline"</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"example-block"</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>Block label<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"example-block"</span><span class="nt">&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<table><thead>
+<tr>
+<th style="text-align: left">Class name</th>
+<th style="text-align: left">Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><code>block</code></td>
+<td style="text-align: left">Change display to block</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>inline</code></td>
+<td style="text-align: left">Change display to inline</td>
+</tr>
+</tbody></table>
+
+<h1 id="clearfix">Clearfix</h1>
+
+<p><code>clearfix</code> can be applied on a container that breaks because of floating elements inside it. </p>
+</div><div class="codeExample"><div class="exampleOutput"><div class="clearfix" style="border: 1px solid black;">
+  <img src="http://placehold.it/200x300" alt="" style="float: right;">
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"clearfix"</span> <span class="na">style=</span><span class="s">"border: 1px solid black;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/200x300"</span> <span class="na">alt=</span><span class="s">""</span> <span class="na">style=</span><span class="s">"float: right;"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<h1 id="hide-elements">Hide elements</h1>
+
+<p>Different ways to hide elements.</p>
+</div><div class="codeExample"><div class="exampleOutput"><a href="" class="visuallyhidden">Example hidden link</a>
+<a href="" class="visuallyhidden focusable">Example hidden link</a>
+<a href="" class="invisible">Example hidden link</a>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"visuallyhidden"</span><span class="nt">&gt;</span>Example hidden link<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"visuallyhidden focusable"</span><span class="nt">&gt;</span>Example hidden link<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"invisible"</span><span class="nt">&gt;</span>Example hidden link<span class="nt">&lt;/a&gt;</span>
+</pre></div></div></div><div class="cortana-content">
+<table><thead>
+<tr>
+<th style="text-align: left">Class name</th>
+<th style="text-align: left">Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><code>visuallyhidden</code></td>
+<td style="text-align: left">Visually hide elements, but have them available for screen readers.</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>focusable</code></td>
+<td style="text-align: left">By also adding this, a link would be shown on focus.</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>invisible</code></td>
+<td style="text-align: left">Hide visually and from screenreaders, but maintain layout.</td>
+</tr>
+</tbody></table>
+
+<h1 id="no-space">No-space</h1>
+
+<p>Remove space on a element.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Class</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><code>nospace</code></td>
+<td style="text-align: left">Remove space arround all edges of a element</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>nospace-top</code></td>
+<td style="text-align: left">Remove space on top of a element</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>nospace-bottom</code></td>
+<td style="text-align: left">Remove space on bottom of a element</td>
+</tr>
+</tbody></table>
+
+<h1 id="space">Space</h1>
+
+<p>Add space to a element. 30px are added on smaller screens and it expands to 60px on larger screens. A background is added in the example to better illustrate the space. </p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Class</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><code>space-top</code></td>
+<td style="text-align: left">Add space on top of a element</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>space-top-half</code></td>
+<td style="text-align: left">Add space on top, but half of <code>space-top</code></td>
+</tr>
+<tr>
+<td style="text-align: left"><code>space-bottom</code></td>
+<td style="text-align: left">Add space on bottom of a element</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>space-bottom-half</code></td>
+<td style="text-align: left">Add half space on bottom of a element</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>space-top-bottom</code></td>
+<td style="text-align: left">Add space on top and bottom of a element</td>
+</tr>
+</tbody></table>
+</div><div class="codeExample"><div class="exampleOutput"><div class="container space-top bg-light">
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat.</p>
+</div>  
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container space-top bg-light"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>  
+</pre></div></div></div><div class="cortana-content">
+        </div>
+      </div>
+    </div>
+
+    <footer class="cortana-footer">
+      Build with love using Trulia's <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/Yago/Cortana">Cortana</a> !
+    </footer>  
+  </div>
+
+  <script src="theme-build/js/vendors.min.js"></script>
+  <script type="text/javascript">
+    var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="theme-build/js/main.js"></script>
+  <script type="text/javascript">
+    function TypeaheadCtrl($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      [
+        
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Alignment",
+              "breadcrumb": "Element - Helper class > Alignment",
+              "path": "element_-_helper_class.html#alignment"
+              },
+            
+              
+              
+              {
+              "title": "Box display",
+              "breadcrumb": "Element - Helper class > Box display",
+              "path": "element_-_helper_class.html#block-display"
+              },
+            
+              
+              
+              {
+              "title": "Clearfix",
+              "breadcrumb": "Element - Helper class > Clearfix",
+              "path": "element_-_helper_class.html#clearfix"
+              },
+            
+              
+              
+              {
+              "title": "Hide elements",
+              "breadcrumb": "Element - Helper class > Hide elements",
+              "path": "element_-_helper_class.html#hide-elements"
+              },
+            
+              
+              
+              {
+              "title": "No-space",
+              "breadcrumb": "Element - Helper class > No-space",
+              "path": "element_-_helper_class.html#no-space"
+              },
+            
+              
+              
+              {
+              "title": "Space",
+              "breadcrumb": "Element - Helper class > Space",
+              "path": "element_-_helper_class.html#space"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Grid three",
+              "breadcrumb": "Container - Grid > Grid three",
+              "path": "container_-_grid.html#grid-three"
+              },
+            
+          
+        
+          
+        
+      {}];
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
+    }
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="cortana-search-title">{{match.model.title}}</p>
+      <p class="cortana-search-path">{{match.model.breadcrumb}}</p>
+    </a>
+  </script>
+  
+    
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    
+      <script type="text/javascript" src="../assets/js/vendor/modernizr.min.js"></script>
+    
+  
+  <!-- Source Components -->
+  
+</body>
+</html>
