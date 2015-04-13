@@ -17,7 +17,7 @@ $black-90: darken(#fff, 90%);
 // Typography Variables
 // ====================
 
-$basefont: 16;
+$basefont: 12;
 $baseh1: 40;
 $baseh2: 26;
 $baseh3: 27;
@@ -56,6 +56,10 @@ $text-direction: ltr;
 $link-color: $black-70;
 $link-color-hover: darken($link-color, 15%);
 
+// Font weights
+$fw-light: 300;
+$fw-regular: 400;
+$fw-bold: 600;
 
 /* Grid settings
 ========================== */

@@ -1,4 +1,35 @@
 .teaser {
+  p {
+    margin: 0 0 .75em;
+  }
+
+  .link-block {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      .title {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .img {
+    display: inline-block;
+  }
+
+  .title {
+    font-size: em(13);
+    font-weight: $fw-bold;
+    clear: none;
+    margin: 1em 0 .25em;
+
+    @include breakpoint($break-large) {
+      font-size: em(18);
+    }
+  }
 
 }
 
@@ -8,6 +39,7 @@
 
 .teaser--adjacent {
   @extend .teaser;
+  @extend %clearfix;
 
   .img {
     @include breakpoint($break-medium) {
