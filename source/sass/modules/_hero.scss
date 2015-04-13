@@ -1,0 +1,15 @@
+.hero {
+  .title {
+    font-size: em($h1);
+    font-weight: $fw-bold;
+    text-align: center;
+  }
+}
+
+.hero--img {
+  @extend .hero;
+}
+
+.hero--video {
+  @extend .hero;
+}
