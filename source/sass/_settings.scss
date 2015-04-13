@@ -64,7 +64,7 @@ $susy: (
   gutters: .5,
   math: fluid,
   output: float,
-  debug: (image: show)
+  // debug: (image: show)
 );
 
 $layout-medium: layout(12 1/2 false); // 12 columns, 1/3 gutter

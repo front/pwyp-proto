@@ -3,7 +3,12 @@
   padding-left: gutter() * .5;
 
   @include breakpoint($break-small) {
-    @include container($break-large)
+    @include container(620px);
+  }
+
+  @include breakpoint(620px + 40px) {
+    padding-right: 0;
+    padding-left: 0;
   }
 
   @include breakpoint($break-medium) {
