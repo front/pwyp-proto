@@ -44,7 +44,7 @@ gulp.task('clean', function() {
 // Copy root level files and folders
 gulp.task('copy-files', function() {
     return gulp.src([
-        // path.src + 'CNAME',
+        './CNAME',
         path.bower + 'jquery/dist/jquery.js',
         path.bower + 'fitvids/jquery.fitvids.js'
     ], { base: '.' }) // base keeps original path
