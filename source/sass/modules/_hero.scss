@@ -1,15 +1,53 @@
 .hero {
   .title {
-    font-size: em($h1);
+    font-size: em($h1-narrow);
     font-weight: $fw-bold;
     text-align: center;
+    margin-top: $space-double;
+    margin-bottom: $space-double;
+    clear: none;
+
+    @include breakpoint($break-medium) {
+      font-size: em($h1);
+      margin-top: $space-quadruple;
+      margin-bottom: $space-quadruple;
+    }
+  }
+}
+
+.hero--img,
+.hero--video {
+  @extend .hero;
+
+  .title {
+    margin-top: $space-half;
+
+    @include breakpoint($break-medium) {
+      margin-top: $space;
+      margin-bottom: $space;
+    }
   }
 }
 
 .hero--img {
-  @extend .hero;
+  .title {
+  }
+
 }
 
 .hero--video {
-  @extend .hero;
+  .video {
+    @include breakpoint($break-large) {
+      @include span(5 $layout-medium last);
+      margin-top: $space;
+      margin-bottom: $space;
+    }
+  }
+
+  .title {
+    @include breakpoint($break-large) {
+      font-size: em($h2);
+      @include span(6 $layout-medium);
+    }
+  }
 }
