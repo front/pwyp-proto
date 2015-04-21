@@ -30,9 +30,33 @@
 }
 
 .hero--img {
+  position: relative;
+  overflow: hidden;
+
   .title {
+    position: relative;
+    
+    @include breakpoint($break-medium) {
+      z-index: 10;
+      padding: $space-quadruple 10%;
+      color: $white;
+    }
   }
 
+  .img {
+    @include breakpoint($break-medium) {
+      position: absolute;
+      min-height: 100%;
+      max-width: none;
+      min-widht: 100%;
+      border: 0;
+      margin: auto;
+      top: -9999px;
+      right: -9999px;
+      bottom: -9999px;
+      left: -9999px;
+    }
+  }
 }
 
 .hero--video {
