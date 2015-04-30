@@ -45,6 +45,10 @@
       @include span(4 $layout-medium);
     }
   }
+  
+  .title {
+    margin-top: 0;
+  }
 
   @include breakpoint($break-medium) {
     .title, 
@@ -52,6 +56,7 @@
       margin-left: span(4 $layout-medium) + gutter($layout-medium);
     }
   }
+
 }
 
 .teaser-quote {

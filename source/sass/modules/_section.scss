@@ -9,3 +9,12 @@
 .section-footer {
   // @extend %clearfix;
 }
+
+.section-row {
+  + .section-row {
+    margin-top: $space-double;
+    @include breakpoint($break-large) {
+      margin-top: $space-quadruple;
+    }
+  }
+}

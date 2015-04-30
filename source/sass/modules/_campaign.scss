@@ -13,7 +13,7 @@
 
   .title {
     font-size: em($h1-narrow);
-    // font-weight: $fw-bold;
+    font-weight: $fw-bold;
     margin-top: 0;
     margin: 0;
     
@@ -74,6 +74,24 @@
     font-size: em($h6);
     color: $black-50;
   }
+}
 
+.campaign-sms {
+  @extend .hero--img;
+  text-align: center;
 
+  .sidebars & {
+    text-align: left;
+  }
+
+  .title {
+    margin-bottom: 0;
+    font-weight: $fw-bold;
+    text-align: inherit;
+  }
+
+  .note {
+    margin: 1em 0 0;
+    font-size: em($h4);
+  }
 }

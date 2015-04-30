@@ -1,0 +1,14 @@
+.section-title {
+  font-size: em($h5);
+  text-transform: uppercase;
+  margin-bottom: $space-two-third;
+  text-align: center;
+  letter-spacing: -.04em;
+  font-weight: $fw-bold;
+
+  @include breakpoint($break-large) {
+    font-size: em($h4);
+    margin-bottom: $space;
+    text-align: left;
+  }
+}
