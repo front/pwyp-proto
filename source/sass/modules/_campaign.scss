@@ -1,0 +1,79 @@
+/**
+ * Newsletter signup
+ */
+.signup-newsletter {
+
+  // In context - Main content
+  #content & {
+    text-align: center;
+    max-width: 37em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .title {
+    font-size: em($h1-narrow);
+    // font-weight: $fw-bold;
+    margin-top: 0;
+    margin: 0;
+    
+    @include breakpoint($break-large) {
+      font-size: em($h2);
+    }
+  }
+
+  .desc {
+    font-size: em($h4);
+    line-height: 1.6;
+    p {
+      margin: 1.2em 0 0;
+    }
+
+    // In context - Main content
+    #content & {
+      @include breakpoint($break-large) {
+        font-size: em($h4);
+      }
+    }
+  }
+
+  .form {
+    @extend %clearfix;
+    margin-top: 1em;
+
+    .input,
+    .btn {
+      display: block;
+      width: 100%;
+      height: 30px;
+    }
+
+    .input {
+      @include breakpoint($break-large) {
+        #content & {
+          width: 70%;
+          float: left;
+        }
+      }
+    }
+
+    .btn {
+      @extend .btn--cta;
+
+      @include breakpoint($break-large) {
+        #content & {
+          width: 30%;
+          float: left;
+        }
+      }
+    }
+  }
+
+  .note {
+    margin: .5em 0 0;
+    font-size: em($h6);
+    color: $black-50;
+  }
+
+
+}

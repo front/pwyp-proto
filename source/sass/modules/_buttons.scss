@@ -1,0 +1,16 @@
+.btn {
+  border: none;
+  padding: .25em 1em;
+  display: inline-block;
+}
+
+.btn--cta {
+  @extend .btn;
+  background: linear-gradient(to bottom, $blue-dark, $blue-light);
+  color: $white;
+
+  &:hover,
+  &:focus {
+    background: $blue-light;
+  }
+}
