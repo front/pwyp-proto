@@ -6,11 +6,12 @@
 
 .btn--cta {
   @extend .btn;
-  background: linear-gradient(to bottom, $blue-dark, $blue-light);
+  // background: linear-gradient(to bottom, $blue-dark, $blue-light);
+  background-color: $blue;
   color: $white;
 
   &:hover,
   &:focus {
-    background: $blue-light;
+    background: scale_color($blue, $lightness: 10%);
   }
 }
