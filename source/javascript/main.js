@@ -1,30 +1,51 @@
-"use strict";
-
 /**
  * Fluid videos using fitvids
  */
 $('.js-fitvid').fitVids();
 
 
-// Accordion
-var acc = $('.js-accordion'),
-    accChild = acc.children('li'),
-    accGrandChild = accChild.children('ul');
+/**
+ * Accordion list
+ * Manipulate first level of a list using `list-accordion` to a anchor and hides
+ * sibling/child elments that later can be opened.
+ */
+var acc = document.getElementsByClassName('list-accordion'),
+    accLength = acc.length;
 
-// accGrandChild.hide();
-var text = accChild[0].childNodes[0],
-    textNode = document.createTextNode(text.nodeValue),
-    anchor = document.createElement('a');
+if (accLength) {
+  if(accLength == 1) {
+    var acc2 = acc[0];
+    listAccordionEnhance();
+  } else {
+    for (var i = 0; i < accLength; i++) {
+      var acc2 = acc[i];
+      listAccordionEnhance();
+    }
+  }
+}
 
-anchor.setAttribute('href', '');
-anchor.appendChild(textNode);
+function listAccordionEnhance() {
+  for (var i = 0, j = acc2.children.length; i < j; i++) {
+    var parentLi = acc2.children[i],
+        el = document.createElement('a'),
+        value = parentLi.childNodes[0],
+        siblingUl = parentLi.childNodes[1],
+        elTextNode = document.createTextNode( value.nodeValue );
+    
+    el.setAttribute('href', '');
+    el.setAttribute('class', 'is-closed title');
+    el.appendChild(elTextNode);
+    value.remove();
+    parentLi.insertBefore(el, siblingUl);
+  }
+  
+}
 
-console.log(anchor);
+var accChild = $('.list-accordion').find('a.title');
+accChild.siblings().hide();
 
-// for(var i = 0, j = accChild.length; i < j; i++ ) {
-//   console.log(accChild[i]);
-// }
-
-accChild.on('click', function() {
-  $(this).children('ul').slideToggle(300);
+accChild.on('click', function(e) {
+  e.preventDefault();
+  $(this).siblings('ul').slideToggle(300);
+  $(this).toggleClass('is-closed is-open');
 });

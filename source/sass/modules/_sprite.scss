@@ -8,16 +8,22 @@
     display: inline-block;
     background-image: url("../img/sprite/export/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 5.6875em 4.4375em;
+    background-size: 2.125em 4.25em;
 }
 
 .no-svg .icon:before {
     background-image: url("../img/sprite/export/sprite.png");
 }
 
-.icon.icon-tag:before {
+.icon.icon-chevron-circle-right-blue:before {
     background-position: -0.3125em -0.3125em;
-    width: 5.0625em;
-    height: 3.8125em;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.icon.icon-chevron-right-blue:before {
+    background-position: -0.3125em -2.4375em;
+    width: 1.5em;
+    height: 1.5em;
 }
 

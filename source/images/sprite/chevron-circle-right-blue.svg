@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12002) - http://www.bohemiancoding.com/sketch -->
+    <title>chevron-circle-right-blue</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="chevron-circle-right-blue" sketch:type="MSArtboardGroup" fill="#00AEEF">
+            <path d="M11.402343,17.8476632 C11.1093739,18.1406323 10.6406234,18.1406323 10.3476543,17.8476632 L9.15234036,16.6523493 C8.85937126,16.3593802 8.85937126,15.8906296 9.15234036,15.5976605 L12.7500009,12 L9.15234036,8.40233946 C8.85937126,8.10937036 8.85937126,7.6406198 9.15234036,7.3476507 L10.3476543,6.15233678 C10.6406234,5.85936768 11.1093739,5.85936768 11.402343,6.15233678 L16.7226619,11.4726556 C17.015631,11.7656247 17.015631,12.2343753 16.7226619,12.5273444 L11.402343,17.8476632 Z M21.0000107,12 C21.0000107,7.03124408 16.9687559,2.99998927 12,2.99998927 C7.03124408,2.99998927 2.99998927,7.03124408 2.99998927,12 C2.99998927,16.9687559 7.03124408,21.0000107 12,21.0000107 C16.9687559,21.0000107 21.0000107,16.9687559 21.0000107,12 L21.0000107,12 Z" id="-copy" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
