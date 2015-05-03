@@ -95,14 +95,20 @@
     margin-bottom: 0;
     font-weight: $fw-bold;
     text-align: inherit;
+
+    .sidebars & {
+      font-size: em($h3);
+    }
   }
 
   .note {
     margin: 1em 0 0;
     font-size: em($h4);
-    background-color: rgba(0,0,0,.5);
-    display: inline-block;
-    padding: .5em 2em;
+    @include breakpoint($break-medium) {
+      background-color: rgba(0,0,0,.5);
+      display: inline-block;
+      padding: .5em 2em;
+    }
 
   }
 }

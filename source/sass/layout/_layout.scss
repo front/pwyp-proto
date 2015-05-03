@@ -1,14 +1,14 @@
 .container {
-  padding-right: gutter() * .5;
-  padding-left: gutter() * .5;
+  padding-right: gutter() * .5 !important;
+  padding-left: gutter() * .5 !important;
 
   @include breakpoint($break-small) {
     @include container(620px);
   }
 
   @include breakpoint(620px + 40px) {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
   }
 
   @include breakpoint($break-medium) {
