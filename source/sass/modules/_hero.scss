@@ -60,7 +60,7 @@
     color: inherit;
   }
 
-  .img {
+  img {
     @include breakpoint($break-medium) {
       position: absolute;
       min-height: 100%;
