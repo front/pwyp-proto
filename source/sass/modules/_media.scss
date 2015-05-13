@@ -50,7 +50,7 @@ a.logo {
   .title {
     color: #000;
     font-size: em($h3);
-    margin-top: 1em;
+    margin-top: 1em !important;
     margin-bottom: .25em;
     
     @include breakpoint($break-medium) {
