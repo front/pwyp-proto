@@ -10,8 +10,10 @@
   // @extend %clearfix;
 }
 
-.section-row {
-  + .section-row {
+.section-row,
+.field-type-entityreference {
+  + .section-row,
+  + .field-type-entityreference {
     margin-top: $space-double;
     @include breakpoint($break-large) {
       margin-top: $space-quadruple;
