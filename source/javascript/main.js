@@ -1,7 +1,7 @@
 /**
  * Fluid videos using fitvids
  */
-$('.js-fitvid').fitVids();
+$('.media-youtube-video').fitVids();
 
 
 /**
