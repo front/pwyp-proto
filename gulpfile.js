@@ -89,9 +89,9 @@ gulp.task('img', function () {
 // Javascript tasks
 gulp.task('js', function() {
     return gulp.src([
-            path.bower + 'jquery/dist/jquery.js',
-            path.bower + 'fitvids/jquery.fitvids.js',
-            path.src + 'javascript/vendor/*.js',
+            // path.bower + 'jquery/dist/jquery.js',
+            // path.bower + 'fitvids/jquery.fitvids.js',
+            // path.src + 'javascript/vendor/*.js',
             path.src + 'javascript/*.js'
         ])
         .pipe(jshint())
