@@ -1,5 +1,5 @@
 // Document ready function
-(function() {
+$( document ).ready(function() {
 
   /**
    * Fluid videos using fitvids
@@ -54,4 +54,4 @@
     $(this).toggleClass('is-closed is-open');
   });
 
-})(); // End document ready function
+}); // End document ready function
