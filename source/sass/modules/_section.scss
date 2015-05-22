@@ -14,9 +14,9 @@
 .field-type-entityreference {
   + .section-row,
   + .field-type-entityreference {
-    margin-top: $space-double;
-    @include breakpoint($break-large) {
-      margin-top: $space-quadruple;
+    margin-top: $space;
+    @include breakpoint($break-medium) {
+      margin-top: $space-double;
     }
   }
 }
