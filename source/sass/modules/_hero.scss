@@ -63,15 +63,9 @@
   img {
     @include breakpoint($break-medium) {
       position: absolute;
-      min-height: 100%;
-      max-width: none;
-      min-width: 100%;
-      border: 0;
-      margin: auto;
-      top: -9999px;
-      right: -9999px;
-      bottom: -9999px;
-      left: -9999px;
+      left: 0;
+      top: 0;
+      width: 100%;
     }
   }
 }
